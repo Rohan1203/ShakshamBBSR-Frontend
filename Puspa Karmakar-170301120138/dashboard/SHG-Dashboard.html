@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Admin-DashBoard</title>
+    <title>SHG-DashBoard</title>
      <link rel = "icon" href =  
 "logo.jpeg" 
         type = "image/x-icon"> 
@@ -32,7 +32,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top"><img src="logo.jpeg" alt="logo.jpeg" style="width: 70px;height: 60px;border-radius: 30px;">
-                <a class="navbar-brand" href="index.html">SHAKSHAM<sub style="font-size: 10px;">Admin</sub></a>
+                <a class="navbar-brand" href="index.html">SHAKSHAM<sub style="font-size: 10px;">SHG Name</sub></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -126,11 +126,11 @@
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">Admin</h5>
+                                    <h5 class="mb-0 text-white nav-user-name">SHG Name</h5>
                                     <span class="status"></span>
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
-                                <!-- <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a> -->
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Change password</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
@@ -158,7 +158,7 @@
                             </li>
                             <li class="nav-item ">
                                <!--  <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"> -->
-                                	<a class="nav-link active" href="index.html" aria-expanded="false" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle">
+                                	<a class="nav-link active" href="SHG-DashBoard.html" aria-expanded="false" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle">
                                 </i>Dashboard <!-- <span class="badge badge-success">6</span> --></a>
                                <!--  <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -264,7 +264,7 @@
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/Category-Form.html">Category-Form</a>
+                                            <a class="nav-link" href="pages/Product-Form.html">Product-Form</a>
                                         </li>
                                         
                                     </ul>
@@ -275,13 +275,7 @@
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/On-Board-SHGs.html">On-Board-SHGs</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/Category.html">Category Table</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/Category.html">Product Table</a>
+                                            <a class="nav-link" href="pages/Product.html">Product Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -441,7 +435,7 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Admin Dashboard</h2>
+                                <h2 class="pageheader-title">SHG Name Dashboard</h2>
                                 <!-- <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p> -->
                                <!--  <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
@@ -463,21 +457,7 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">SHG Request</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">no.</h1>
-                                        </div>
-                                       <!--  <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
-                                        </div> -->
-                                    </div>
-                                    <!-- <div id="sparkline-revenue"></div> -->
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">On Board SHG</h5>
+                                        <h5 class="text-muted">On Board Product</h5>
                                         <div class="metric-value d-inline-block">
                                             <h1 class="mb-1">no.</h1>
                                         </div>
@@ -491,7 +471,21 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Category</h5>
+                                        <h5 class="text-muted">Order Accepted</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1">no.</h1>
+                                        </div>
+                                        <!-- <div class="metric-label d-inline-block float-right text-primary font-weight-bold">
+                                            <span>N/A</span>
+                                        </div> -->
+                                    </div>
+                                    <!-- <div id="sparkline-revenue3"></div> -->
+                                </div>
+                            </div>
+                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">New Order Rquests</h5>
                                         <div class="metric-value d-inline-block">
                                             <h1 class="mb-1">no.</h1>
                                         </div>
@@ -526,30 +520,27 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12" ng-controller = "all-shg">
                                 <div class="card">
-                                    <h5 class="card-header">Recent-SHGs-Requests</h5>
+                                    <h5 class="card-header">No. of Order</h5>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table">
                                                 <thead class="bg-light">
                                                     <tr class="border-0">
                                                         <th class="border-0">SL-No.</th>
-                                                        <th class="border-0">SHG Name</th>
-                                                        <th class="border-0">SHG Id</th>
-                                                        <th class="border-0">SHG State</th>
-                                                        <th class="border-0">Contact Number</th>
+                                                        <th class="border-0">Customer Name</th>
+                                                        <th class="border-0">Product Name</th>
+                                                        <th class="border-0">Category Name</th>
+                                                        <th class="border-0">Quantity</th>
+                                                        <th class="border-0">Address</th>
                                                         
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr ng-repeat = "x in data">
-                                                        <td>{{$index + 1}}</td>
-                                                        <td>{{x.shgName}}</td>
-                                                        <td>{{x.shgId}}</td>
-                                                        <td>{{x.state}}</td>
-                                                        <td>{{x.contactNumber}}</td>
+                                                       
                                                     </tr>
                                                     <tr>
-                                                        <td colspan="9"><a href="pages/SHG-Requests.html" class="btn btn-outline-light float-right">View Details</a></td>
+                                                       <!--  <td colspan="9"><a href="pages/SHG-Requests.html" class="btn btn-outline-light float-right">View Details</a></td> -->
                                                     </tr>
                                                 </tbody>
                                             </table>
