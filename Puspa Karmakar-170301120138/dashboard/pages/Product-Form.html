@@ -15,6 +15,12 @@
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/buttons.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/select.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/fixedHeader.bootstrap4.css">
+    
+     <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    
+<script src="../apiCall.js" >
+    </script>
+
 </head>
 
 <body ng-app = "shg-app">
@@ -571,25 +577,33 @@
                                 </div>
                                 <div class="card">
                                     <h5 class="card-header">Product Form</h5>
-                                    <div class="card-body">
+                                    <div class="card-body" ng-controller = "ProductController">
                                         <form>
-                                            <div class="form-group">
-                                                <label for="inputText3" class="col-form-label">Product Name</label>
-                                                <input id="inputText3" type="text" class="form-control">
-                                                <label for="exampleFormControlTextarea1">Description
-                                                </label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Description of Product"></textarea>
-                                                 <label for="inputText4" class="col-form-label">Price</label>
-                                                <input id="inputText4" type="number" class="form-control">
+                                            <div class="form-group" >
+                                                <label for="inputText3" class="col-form-label">SHG ID</label>
+                                                <input id="inputText3" type="text" ng-model = "shgId" class="form-control">
+                                                
                                                 <label for="inputText3" class="col-form-label">Category Name</label>
-                                                <input id="inputText3" type="text" class="form-control">
-                                                <label for="inputText3" class="col-form-label">SHG Name</label>
-                                                <input id="inputText3" type="text" class="form-control">
+                                                <input id="inputText3" type="text" ng-model = "catName" class="form-control">
+                                            
+                                                <label for="inputText3" class="col-form-label">Product Name</label>
+                                                <input id="inputText3" type="text" ng-model = "productName" class="form-control">
+                                            
+                                                <label for="exampleFormControlTextarea1">Description</label>                           
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" ng-model = "description" rows="3" placeholder="Enter Description of Product"></textarea>
+                                                
+                                                 <label for="inputText4" class="col-form-label">Price</label>
+                                                <input id="inputText4" type="number" ng-model = "price" class="form-control">
+                                                
+                                                
                                                 <label for="inputText4" class="col-form-label">No. of Availability</label>
-                                                <input id="inputText4" type="number" class="form-control">
+                                                <input id="inputText4" type="number" ng-model = "noOfAvailability" class="form-control">
                                                 
                                             </div>
-                                           <input type="button" name="Submit" ng-click="postData()" value="Submit" id="submit"/>
+                                            <right>
+                                           <input type="button" name="Submit" ng-click="postData()" value="Submit" id="submit"
+                                                 />
+                                                </right>
                                         </form>
                                     </div>
                                   
