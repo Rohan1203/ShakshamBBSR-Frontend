@@ -10,6 +10,7 @@
             $log.log(resp.data);
             $scope.data = resp.data;
         }, function(resp){
+            
             $log.log('Error occured..'+resp.data)
         });
         });
