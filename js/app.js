@@ -1,6 +1,6 @@
 'use strict'
 
-var app = angular.module('shg-app', ['ngRoute']);
+var app = angular.module('shg-app',[]);
 
 //Rohan's code start
 
@@ -43,7 +43,7 @@ app.controller('all-shg', function ($scope, $http, $log) {
   });
 });
 
-/*product addition*/
+/*product addition by Preeti*/
 app.controller('ProductController', function ($scope, $http, $log) {
 
   $scope.catName;
@@ -66,7 +66,7 @@ app.controller('ProductController', function ($scope, $http, $log) {
   };
 });
 
-/*shg addition */
+/*shg addition by Preeti */
 app.controller('shgController', function ($scope, $http, $log) {
 
   $scope.shgId;
@@ -87,10 +87,11 @@ app.controller('shgController', function ($scope, $http, $log) {
   $scope.postData = function () {
 
     $http({
-      url: "http://localhost:8080/product/addProduct" + "/" + $scope.shgId + "/" + $scope.shgName + "/" + $scope.addresss + "/" + $scope.blockName + "/" + $scope.district + "/" + $scope.state + "/" + $scope.pincode + "/" + $scope.mobileNumber + "/" + $scope.noOfMember + "/" + $scope.aadharNumber + "/" + $scope.accountNumber + "/" + $scope.ifscCode + "/" + $scope.shgEmail,
+      url: "http://localhost:8080/shg/addshg" + "/" + $scope.shgId + "/" + $scope.shgName + "/" + $scope.addresss + "/" + $scope.blockName + "/" + $scope.district + "/" + $scope.state + "/" + $scope.pincode + "/" + $scope.mobileNumber + "/" + $scope.noOfMember + "/" + $scope.aadharNumber + "/" + $scope.accountNumber + "/" + $scope.ifscCode + "/" + $scope.shgEmail,
       method: "GET"
     }).then(function (response) {
-      $scope.result = response.data;
+     // $scope.result = response.data;
+        alert($scope.result);
     }, function (response) {
       alert("Error is there" + response.data);
     });

@@ -18,13 +18,13 @@
     
     <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     
-   <script src="../apiCall.js" >
+   <script src="../../js/app.js" >
     </script>
 </head>
 
 <body ng-app = "shg-app">
     <div class="container">
-      <div class="row" >
+      <div class="row" ng-controller = "shgController" >
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="section-block" id="basicform">
                                     <h3 class="section-title">SHG Registration Form</h3>
@@ -33,7 +33,7 @@
                                   
                                     <div class="card-body">
                                         <form>
-                                            <div class="form-group" ng-controller = "shgController" >
+                                            <div class="form-group"  >
                                                 
                                                 <label for="inputText3" class="col-form-label">Shg Id:</label>
                                                 <input id="inputText3" type="text" ng-model="shgId" class="form-control">
