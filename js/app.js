@@ -79,6 +79,21 @@ app.controller('all-shg', function($scope, $http, $log) {
 
     };
 
+    $scope.entity = {}
+
+    $scope.edit = function(index){
+       $scope.entity = $scope.shgs[index];
+       $scope.entity.index = index;
+        $scope.entity.editable = true;
+
+     };
+
+     // $scope.save = function(index){
+     //   $scope.shgs[index].editable = false;
+       
+       
+     // }
+
 });
 
 /*product addition by Preeti*/
