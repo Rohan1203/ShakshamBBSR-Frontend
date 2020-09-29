@@ -588,7 +588,26 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-
+                                            <tr ng-repeat="" >
+                                            <td>{{$index+1}}</td>
+                                            <td>
+                                                <input type="text"   ng-model="shg.shgId" ng-show="shg.editable">
+                                                <span ng-hide="shg.editable">{{}}</span>
+                                            </td>
+                                            <td>
+                                                <input type="text"   ng-model="shg.shgId" ng-show="shg.editable">
+                                                <span ng-hide="shg.editable">{{}}</span>
+                                            </td>
+                                            <td>
+                                                <input type="text"   ng-model="shg.shgId" ng-show="shg.editable">
+                                                <span ng-hide="shg.editable">{{}}</span>
+                                            </td>
+                                             <td>
+                                              <span ng-click="edit($index)" ng-hide="shg.editable">Edit</span>
+                                              <span ng-click="save($index)" ng-show="shg.editable">Save</span>
+                                              <span ng-click="delete($index)"> | Delete</span>
+                                          </td>
+                                          </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
