@@ -88,11 +88,11 @@ app.controller('all-shg', function($scope, $http, $log) {
 
      };
 
-     // $scope.save = function(index){
-     //   $scope.shgs[index].editable = false;
+     $scope.save = function(index){
+       $scope.shgs[index].editable = false;
        
        
-     // }
+     }
 
 });
 
