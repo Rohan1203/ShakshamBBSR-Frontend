@@ -94,7 +94,26 @@ app.controller('all-shg', function($scope, $http, $log) {
        
      }
 
+
+     $scope.delete = function(index){
+        $scope.value = $scope.shgs[index].shgId;
+        $http({
+        url: 'http://localhost:8080/shg/shgdelete/'+ $scope.value,
+        method: 'GET'
+    }).then(function(data) {
+        
+        alert("succes");
+
+    }, function(data) {
+
+        $log.log('Error occured..' + data.data)
+    });     
+
+    };
+
 });
+
+
 
 /*product addition by Preeti*/
 app.controller('ProductController', function($scope, $http, $log) {
