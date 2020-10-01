@@ -19,11 +19,14 @@ app.controller('indexController', function($scope, $http) {
             .then(function(resp) {
                 $scope.token = resp.data.token;
                 $scope.username = resp.data.username;
+                $scope.type = resp.data.type;
 
                 if ($scope.token == null) {
-                    alert("Server not responding...");
-                } else {
+                    alert("psername and password not recognized..");
+                } else if ($scope.type == "admin") {
                     location.replace("../dashboard/adminDashboard.html");
+                } else {
+                    location.replace("../dashboard/SHG-Dashboard.html");
                 }
             }, function(resp) {
                 alert('Error occured during fetching data..' + resp.data);
