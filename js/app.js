@@ -37,18 +37,86 @@ app.controller('indexController', function($scope, $http) {
 
 //puspa's code
 app.controller('all-shg', function($scope, $http, $log) {
+    $scope.shgs = [{
+        shgId: "",
+        shgName: "",
+        shgEmail: "",
+        mobileNumber: "",
+        address: "",
+        blockName: "",
+        district: "",
+        state: "",
+        pincode: "",
+        noOfMember: "",
+        aadharNumber: "",
+        accountNumber: "",
+        ifscCode: "",
+        data: "",
+        editable: "",
+    }]
     $http({
         url: 'http://localhost:8080/shg/shgrequests',
         method: 'GET'
     }).then(function(resp) {
         $log.log(resp.data);
-        $scope.data = resp.data;
+        $scope.shgs = resp.data;
 
     }, function(resp) {
 
         $log.log('Error occured..' + resp.data)
     });
+
+    $scope.verify = function(index){
+        $scope.value = $scope.shgs[index].shgId;
+        $http({
+        url: 'http://localhost:8080/shg/verifySHG/'+ $scope.value,
+        method: 'GET'
+    }).then(function(data) {
+        
+        alert("succes");
+
+    }, function(data) {
+
+        $log.log('Error occured..' + data.data)
+    });     
+
+    };
+
+    $scope.entity = {}
+
+    $scope.edit = function(index){
+       $scope.entity = $scope.shgs[index];
+       $scope.entity.index = index;
+        $scope.entity.editable = true;
+
+     };
+
+     // $scope.save = function(index){
+     //   $scope.shgs[index].editable = false;
+       
+       
+     // }
+
+
+     $scope.delete = function(index){
+        $scope.value = $scope.shgs[index].shgId;
+        $http({
+        url: 'http://localhost:8080/shg/shgdelete/'+ $scope.value,
+        method: 'GET'
+    }).then(function(data) {
+        
+        alert("succes");
+
+    }, function(data) {
+
+        $log.log('Error occured..' + data.data)
+    });     
+
+    };
+
 });
+
+
 
 /*product addition by Preeti*/
 app.controller('ProductController', function($scope, $http, $log) {
