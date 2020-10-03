@@ -4,9 +4,9 @@ var app = angular.module('shg-app', []);
 
 //Rohan's code start
 
-// app.run(function ($rootScope) {
-//   $rootScope.token = 'vajscbischescc.qhdcuwehdjhkcnedsioc-wncjkesmbnedv.edvdjhjbn';
-// });
+app.run(function($rootScope) {
+    $rootScope.token;
+});
 
 app.controller('indexController', function($scope, $http) {
 
@@ -66,51 +66,51 @@ app.controller('all-shg', function($scope, $http, $log) {
         $log.log('Error occured..' + resp.data)
     });
 
-    $scope.verify = function(index){
+    $scope.verify = function(index) {
         $scope.value = $scope.shgs[index].shgId;
         $http({
-        url: 'http://localhost:8080/shg/verifySHG/'+ $scope.value,
-        method: 'GET'
-    }).then(function(data) {
-        
-        alert("succes");
+            url: 'http://localhost:8080/shg/verifySHG/' + $scope.value,
+            method: 'GET'
+        }).then(function(data) {
 
-    }, function(data) {
+            alert("succes");
 
-        $log.log('Error occured..' + data.data)
-    });     
+        }, function(data) {
+
+            $log.log('Error occured..' + data.data)
+        });
 
     };
 
     $scope.entity = {}
 
-    $scope.edit = function(index){
-       $scope.entity = $scope.shgs[index];
-       $scope.entity.index = index;
+    $scope.edit = function(index) {
+        $scope.entity = $scope.shgs[index];
+        $scope.entity.index = index;
         $scope.entity.editable = true;
 
-     };
+    };
 
-     // $scope.save = function(index){
-     //   $scope.shgs[index].editable = false;
-       
-       
-     // }
+    // $scope.save = function(index){
+    //   $scope.shgs[index].editable = false;
 
 
-     $scope.delete = function(index){
+    // }
+
+
+    $scope.delete = function(index) {
         $scope.value = $scope.shgs[index].shgId;
         $http({
-        url: 'http://localhost:8080/shg/shgdelete/'+ $scope.value,
-        method: 'GET'
-    }).then(function(data) {
-        
-        alert("succes");
+            url: 'http://localhost:8080/shg/shgdelete/' + $scope.value,
+            method: 'GET'
+        }).then(function(data) {
 
-    }, function(data) {
+            alert("succes");
 
-        $log.log('Error occured..' + data.data)
-    });     
+        }, function(data) {
+
+            $log.log('Error occured..' + data.data)
+        });
 
     };
 
