@@ -95,29 +95,7 @@ app.controller('all-shg', function($scope, $http, $log) {
     // $scope.save = function(index){
     //   $scope.shgs[index].editable = false;
 
-
-<<<<<<< HEAD
-    // }
-=======
-     $scope.save = function(index){
-       $scope.shgs[index].editable = false;
-       $scope.value = $scope.shgs[index].shgId;
-       var data = {
-        shgId : $scope.shgs[index].shgId,
-        shgName : $scope.shgs[index].shgName
-       }
-       $log.log(data);
-       $http.put('http://localhost:8080/updateshg/'+ $scope.value, JSON.stringify(data)).then(function(response){
-        
-        $log.log(data);
-
-    }, function(data) {
-
-        $log.log('Error occured..' + data.data)
-    });     
-     };
->>>>>>> 41a9a1f6b19b06ba4c7e33fdb92d8feb5bef3307
-
+    //Puspa add your code here
 
     $scope.delete = function(index) {
         $scope.value = $scope.shgs[index].shgId;
