@@ -97,6 +97,7 @@ app.controller('all-shg', function($scope, $http, $log) {
 
     //Puspa add your code here
 
+//Code by supriya
     $scope.delete = function(index) {
         $scope.value = $scope.shgs[index].shgId;
         $http({
@@ -192,3 +193,77 @@ app.controller('categoryController', function($scope, $http, $log) {
         });
     };
 });
+
+// Ajit's code
+app.controller('productController', function($scope, $http, $log) {
+     $scope.categories = [{
+        catId: "",
+         catName: "",
+         catType: "", 
+        editable: "" 
+     }];  
+    $http({
+        url: 'http://localhost:8080/category/allcategory',
+        method: 'GET'
+    }).then(function(resp) {
+         $log.log(resp.data);
+        $scope.categories = resp.data;
+
+    }, function(resp) {
+
+        $log.log('Error occured..' + resp.data)
+    });
+
+
+/*  $scope.verify = function(index) {
+        $scope.value = $scope.categories[index].catId;
+        $http({
+            url: 'http://localhost:8080/shg/verifySHG/' + $scope.value,
+            method: 'GET'
+        }).then(function(data) {
+
+            alert("succes");
+
+        }, function(data) {
+
+            $log.log('Error occured..' + data.data)
+        });
+
+    };  */
+
+    $scope.entity = {}
+
+    $scope.edit = function(index) {
+        $scope.entity = $scope.categories[index];
+        $scope.entity.index = index;
+        $scope.entity.editable = true;
+
+    };
+
+    // $scope.save = function(index){
+    //   $scope.shgs[index].editable = false;
+
+    //Puspa add your code here
+
+//Code by AJit
+    $scope.delete = function(index) {
+        $scope.value = $scope.categories[index].catId;
+        $http({
+            url: 'http://localhost:8080/category/deletecat/' + $scope.value,
+            method: 'GET'
+        }).then(function(data) {
+
+            alert("succes");
+
+        }, function(data) {
+
+            $log.log('Error occured..' + data.data)
+        });
+
+    };
+
+});
+
+
+
+
