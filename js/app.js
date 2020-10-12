@@ -56,7 +56,7 @@ app.controller('all-shg', function($scope, $http, $log) {
     }];
 
     $http({
-        url: 'http://localhost:8080/shgrequests',
+        url: 'http://localhost:8080/shg/shgrequests',
         method: 'GET'
     }).then(function(resp) {
         $log.log(resp.data);
